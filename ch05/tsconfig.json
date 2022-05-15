@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+
+    "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "module": "commonjs",                                /* Specify what module code is generated. */   
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */ 
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
+    "moduleResolution": "node",
+    "outDir": "dist",                                   // 자바스크립트로 바뀐 파일 저장하는 디렉터리 설정
+    "baseUrl": ".",                                     //tsc는 tsconfig.json파일이 있는 디렉터리에서 실행된다. 그래서 현재 디렉터리를 의미하는 . 설정 (이게 디폴트)
+    "sourceMap": true,
+    "downlevelIteration": true,
+    "noImplicitAny": false,                             //함수 매개변수 타입지정 하지 않았을 때 오류 내주는 값 false 면 오류 무시
+    "paths": { "*":["node_modules/*"]}                  // import ~ from 찾아야하는 디렉터리 설정 (외부패키지는 node_modules에서 가져와야해서 추가)
+  },
+  "include": ["src/**/*"]       // 해당디렉터리, 하위디렉터리 모든 파일 컴파일 대상으로 포함
+}
